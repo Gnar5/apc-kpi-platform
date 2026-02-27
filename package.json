@@ -1,0 +1,11 @@
+{
+  "name": "apc-kpi-platform",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "gen:sql": "node apps/generator/generate-sql.mjs"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

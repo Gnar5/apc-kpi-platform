@@ -4,7 +4,6 @@ secrets/
 *.key
 *.pem
 *.p12
-*.json
 
 # Node
 node_modules/
@@ -18,3 +17,7 @@ __pycache__/
 
 # OS
 .DS_Store
+
+# JSON secrets only (don’t ignore normal project json like package.json)
+secrets/**/*.json
+*.secret.json
