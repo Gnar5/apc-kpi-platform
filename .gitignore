@@ -1,0 +1,20 @@
+# Secrets & local env
+secrets/
+.env
+*.key
+*.pem
+*.p12
+*.json
+
+# Node
+node_modules/
+dist/
+.env.local
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
