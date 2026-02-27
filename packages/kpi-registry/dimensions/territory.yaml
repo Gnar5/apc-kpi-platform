@@ -1,0 +1,5 @@
+id: territory
+name: Territory
+description: Geographic/branch territory used for rollups (PHX, TUC, ABQ, LV, TX, etc.)
+values_source: "config/territory_map"
+required: true

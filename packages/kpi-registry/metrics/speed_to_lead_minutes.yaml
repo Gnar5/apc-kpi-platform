@@ -1,0 +1,22 @@
+id: speed_to_lead_minutes
+name: Speed To Lead (Minutes)
+owner: marketing
+category: responsiveness
+description: Minutes from lead creation to first outbound contact attempt.
+grain:
+  level: lead
+  time_basis: lead_created_at
+definition:
+  expression: "minutes_diff(first_contact_attempt_at, lead_created_at)"
+filters:
+  include:
+    - first_contact_attempt_at is not null
+  exclude:
+    - is_test = true
+    - spam_flag = true
+dimensions:
+  territory: required
+  segment: optional
+source:
+  system: ServiceTitan
+  entity: Lead

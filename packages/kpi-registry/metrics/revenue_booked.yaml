@@ -1,0 +1,21 @@
+id: revenue_booked
+name: Revenue Booked
+owner: finance
+category: revenue
+description: Sum of booked revenue for sold jobs.
+grain:
+  level: job
+  time_basis: sold_at
+definition:
+  expression: "sum(booked_revenue)"
+filters:
+  include:
+    - job_status = "Won"
+  exclude:
+    - is_test = true
+dimensions:
+  territory: required
+  segment: optional
+source:
+  system: ServiceTitan
+  entity: Job

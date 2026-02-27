@@ -1,0 +1,5 @@
+id: segment
+name: Segment
+description: Business segment (Residential, Commercial, HOA, etc.)
+values_source: "config/segment_map"
+required: false

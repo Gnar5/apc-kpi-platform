@@ -1,0 +1,6 @@
+id: exceptions_v1
+name: Exceptions v1
+description: Standard exclusions applied across KPIs.
+exclude:
+  - is_test = true
+  - spam_flag = true

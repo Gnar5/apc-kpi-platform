@@ -1,0 +1,9 @@
+id: attribution_rule_v1
+name: Attribution Rule v1
+description: |
+  Placeholder attribution rule. Replace with your operational standard:
+  - last-touch vs first-touch vs data-driven
+  - handling of direct/organic
+  - call tracking overrides
+logic:
+  type: placeholder

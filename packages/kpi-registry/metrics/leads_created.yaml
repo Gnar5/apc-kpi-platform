@@ -1,0 +1,19 @@
+id: leads_created
+name: Leads Created
+owner: marketing
+category: leads
+description: Count of new leads created in the source system within the selected time basis.
+grain:
+  level: lead
+  time_basis: lead_created_at
+dimensions:
+  territory: required
+  segment: optional
+filters:
+  include: []
+  exclude:
+    - is_test = true
+    - spam_flag = true
+source:
+  system: ServiceTitan
+  entity: Lead

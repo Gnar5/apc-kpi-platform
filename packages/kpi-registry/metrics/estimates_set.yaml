@@ -1,0 +1,20 @@
+id: estimates_set
+name: Estimates Set
+owner: sales
+category: estimates
+description: Count of leads with an estimate appointment scheduled.
+grain:
+  level: lead
+  time_basis: estimate_set_at
+filters:
+  include:
+    - estimate_set_at is not null
+  exclude:
+    - is_test = true
+    - spam_flag = true
+dimensions:
+  territory: required
+  segment: optional
+source:
+  system: ServiceTitan
+  entity: Appointment

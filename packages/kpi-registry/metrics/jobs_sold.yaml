@@ -1,0 +1,19 @@
+id: jobs_sold
+name: Jobs Sold
+owner: sales
+category: conversion
+description: Count of jobs sold (won).
+grain:
+  level: job
+  time_basis: sold_at
+filters:
+  include:
+    - job_status = "Won"
+  exclude:
+    - is_test = true
+dimensions:
+  territory: required
+  segment: optional
+source:
+  system: ServiceTitan
+  entity: Job
