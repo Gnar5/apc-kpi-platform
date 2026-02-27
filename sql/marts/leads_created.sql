@@ -15,9 +15,9 @@
 
 select
   'leads_created' as metric_id,
-  /* lead_created_at */ null::timestamp as metric_time,
-  /* territory */ null::text as territory,
-  /* segment */ null::text as segment,
+  /* lead_created_at */ CAST(NULL AS TIMESTAMP) as metric_time,
+  /* territory */ CAST(NULL AS STRING) as territory,
+  /* segment */ CAST(NULL AS STRING) as segment,
   /* TODO: define expression */ as metric_value
 from /* TODO: ServiceTitan_Lead */ (select 1) t
 ;

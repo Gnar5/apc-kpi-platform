@@ -42,9 +42,9 @@ function stubSql(meta) {
 
 select
   '${meta.id}' as metric_id,
-  /* ${timeBasis} */ null::timestamp as metric_time,
-  /* territory */ null::text as territory,
-  /* segment */ null::text as segment,
+  /* ${timeBasis} */ CAST(NULL AS TIMESTAMP) as metric_time,
+  /* territory */ CAST(NULL AS STRING) as territory,
+  /* segment */ CAST(NULL AS STRING) as segment,
   ${expr} as metric_value
 from /* TODO: ${system}_${entity} */ (select 1) t
 ;

@@ -15,9 +15,9 @@
 
 select
   'estimates_completed' as metric_id,
-  /* estimate_completed_at */ null::timestamp as metric_time,
-  /* territory */ null::text as territory,
-  /* segment */ null::text as segment,
+  /* estimate_completed_at */ CAST(NULL AS TIMESTAMP) as metric_time,
+  /* territory */ CAST(NULL AS STRING) as territory,
+  /* segment */ CAST(NULL AS STRING) as segment,
   /* TODO: define expression */ as metric_value
 from /* TODO: ServiceTitan_Appointment */ (select 1) t
 ;

@@ -15,9 +15,9 @@
 
 select
   'revenue_booked' as metric_id,
-  /* sold_at */ null::timestamp as metric_time,
-  /* territory */ null::text as territory,
-  /* segment */ null::text as segment,
+  /* sold_at */ CAST(NULL AS TIMESTAMP) as metric_time,
+  /* territory */ CAST(NULL AS STRING) as territory,
+  /* segment */ CAST(NULL AS STRING) as segment,
   sum(booked_revenue) as metric_value
 from /* TODO: ServiceTitan_Job */ (select 1) t
 ;
